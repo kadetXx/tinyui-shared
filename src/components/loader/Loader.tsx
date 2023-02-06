@@ -13,6 +13,7 @@ export const Loader = React.forwardRef<HTMLSpanElement, Loaderprops>(
     return (
       <StyledLoader {...props} ref={ref}>
         <StyledSpinner
+          data-testid="spinner"
           css={{
             width: size,
             height: size,

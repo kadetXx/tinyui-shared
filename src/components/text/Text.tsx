@@ -24,6 +24,17 @@ export type TextProps = React.ComponentProps<typeof StyledText> & {
   variant?: keyof typeof TEXVARIANTS;
 };
 
+export const sizeMap: { [id: string]: CSS["fontSize"] } = {
+  h1: "$4xl",
+  h2: "$3xl",
+  h3: "$xxl",
+  h4: "$xl",
+  h5: "$lg",
+  body1: "$base",
+  body2: "$sm",
+  small: "$xs",
+};
+
 export const Text = React.forwardRef<HTMLElement, TextProps>(
   (
     {
@@ -40,17 +51,6 @@ export const Text = React.forwardRef<HTMLElement, TextProps>(
     },
     ref
   ) => {
-    const sizeMap: { [id: string]: CSS["fontSize"] } = {
-      h1: "$4xl",
-      h2: "$3xl",
-      h3: "$xxl",
-      h4: "$xl",
-      h5: "$lg",
-      body1: "$base",
-      body2: "$sm",
-      small: "$xs",
-    };
-
     return (
       <StyledText
         as={TEXVARIANTS[variant]}

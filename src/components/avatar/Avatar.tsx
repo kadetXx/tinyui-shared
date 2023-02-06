@@ -65,9 +65,10 @@ export const Avatar = React.forwardRef<HTMLSpanElement, Avatarprops>(
           <StyledImg
             src={src}
             srcSet={srcSet}
-            alt={alt}
+            alt={alt ?? props.title}
             onError={onError ?? (() => setFallback(true))}
             referrerPolicy="no-referrer"
+            data-testid="avatar-img"
           ></StyledImg>
         ) : icon ? (
           icon

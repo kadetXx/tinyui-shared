@@ -19,27 +19,30 @@ export type HeaderProps = React.ComponentProps<typeof StyledHeader> & {
 export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
   ({ profile, ...props }, ref) => {
     const handleUrl = useCallback(() => {
+      const href = profile?.profileUrl?.replace(window.location.origin, "");
+
       return {
-        href: profile?.profileUrl?.replace(window.location.origin, "") ?? "/",
-        sameOrigin: profile?.profileUrl?.includes(window.location.origin),
+        href: !href?.length ? "/" : href,
+        sameOrigin: !profile?.profileUrl?.includes("http"),
         sameLocation: profile?.profileUrl === window.location.pathname,
       };
     }, [profile]);
 
     return (
       <StyledHeader ref={ref} {...props}>
-        <Flex justify="space-between" align="center">
+        <Flex as='header' justify="space-between" align="center">
           <Text variant="h1" size="$xl">
             AdpTest
           </Text>
 
           {!!profile && (
-            <Flex align="center" gap="1rem">
-              {handleUrl().sameOrigin ? (
-                <Link
-                  rel="noreferrer noopener"
-                  to={handleUrl().sameLocation ? "" : handleUrl().href}
-                >
+            <Flex
+              align="center"
+              gap="1rem"
+              data-testid="header-profile-link-container"
+            >
+              {handleUrl().sameOrigin || handleUrl().sameLocation ? (
+                <Link to={handleUrl().href} data-link="sksksk">
                   <Avatar
                     size="small"
                     title={profile.username || "ADP User"}
@@ -48,8 +51,9 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
                 </Link>
               ) : (
                 <StyledExternalLink
+                  data-link={handleUrl().sameOrigin}
                   rel="noreferrer noopener"
-                  href={handleUrl().sameLocation ? "#0" : handleUrl().href}
+                  href={handleUrl().href}
                   target={handleUrl().sameOrigin ? "_self" : "_blank"}
                 >
                   <Avatar

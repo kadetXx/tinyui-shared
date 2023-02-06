@@ -9,8 +9,20 @@ export type ButtonProps = React.ComponentProps<typeof StyledButton> & {
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, loading, ...props }, ref) => {
     return (
-      <StyledButton ref={ref} {...props} disabled={loading || props.disabled}>
-        {loading && <Loader size="1rem" color="CurrentColor" thickness="2px" />}
+      <StyledButton
+        ref={ref}
+        disabled={loading || props.disabled}
+        isDisabled={loading || props.disabled}
+        {...props}
+      >
+        {loading && (
+          <Loader
+            size="1rem"
+            color="CurrentColor"
+            thickness="2px"
+            data-testid="loader"
+          />
+        )}
         {children}
       </StyledButton>
     );

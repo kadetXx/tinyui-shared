@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+
 import { VariantProps, CSS } from "../../stitches";
-import { Flex } from "../flex/Flex";
 import { StyledInput, StyledInputWrapper } from "./Input.styles";
+import { Flex } from "../flex/Flex";
+
 import InputLabel from "./InputLabel";
 import InputError from "./InputError";
 
@@ -15,7 +17,6 @@ export type InputProps = React.ComponentProps<typeof StyledInput> &
     label?: string | React.ReactNode;
     errorMessage?: string;
     required?: boolean;
-    hideErrorMessage?: boolean;
   };
 
 export const Input: React.FC<InputProps> = ({
@@ -30,12 +31,11 @@ export const Input: React.FC<InputProps> = ({
   disabled,
   wrapperStyle,
   errorMessage,
-  hideErrorMessage,
   className,
   ...inputProps
 }) => {
   return (
-    <Flex direction="column" gapY="0.7rem">
+    <Flex direction="column" gapY="0.7rem" data-testid="input">
       {label && (
         <InputLabel required={required} htmlFor={id}>
           {label}
@@ -55,15 +55,14 @@ export const Input: React.FC<InputProps> = ({
           disabled={disabled}
           required={required}
           type={type}
+          data-testid="input-field"
           {...inputProps}
         />
 
         {append}
       </StyledInputWrapper>
 
-      {errorMessage && !hideErrorMessage && (
-        <InputError>{errorMessage}</InputError>
-      )}
+      {errorMessage && <InputError>{errorMessage}</InputError>}
     </Flex>
   );
 };

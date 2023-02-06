@@ -1,7 +1,7 @@
 import { styled } from "../../stitches";
 import { Button } from "../../components/button";
 
-export const StyledHeader = styled("header", {
+export const StyledHeader = styled("div", {
   backgroundColor: "transparent",
   position: "fixed",
   top: 0,

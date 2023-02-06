@@ -72,7 +72,7 @@ export const StyledButton = styled("button", {
       },
     },
 
-    disabled: {
+    isDisabled: {
       true: {
         pointerEvents: "none",
         backgroundColor: "$black",
