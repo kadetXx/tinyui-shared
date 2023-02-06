@@ -30,7 +30,7 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
 
     return (
       <StyledHeader ref={ref} {...props}>
-        <Flex as='header' justify="space-between" align="center">
+        <Flex as="header" justify="space-between" align="center">
           <Text variant="h1" size="$xl">
             AdpTest
           </Text>
@@ -42,7 +42,7 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
               data-testid="header-profile-link-container"
             >
               {handleUrl().sameOrigin || handleUrl().sameLocation ? (
-                <Link to={handleUrl().href} data-link="sksksk">
+                <Link to={handleUrl().href}>
                   <Avatar
                     size="small"
                     title={profile.username || "ADP User"}
@@ -51,7 +51,6 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
                 </Link>
               ) : (
                 <StyledExternalLink
-                  data-link={handleUrl().sameOrigin}
                   rel="noreferrer noopener"
                   href={handleUrl().href}
                   target={handleUrl().sameOrigin ? "_self" : "_blank"}
