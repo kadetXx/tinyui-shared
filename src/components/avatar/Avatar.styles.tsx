@@ -22,6 +22,11 @@ export const StyledAvatar = styled("span", {
         width: "3.5rem",
         height: "3.5rem",
       },
+
+      large: {
+        width: "7rem",
+        height: "7rem",
+      }
     },
 
     shape: {

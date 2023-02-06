@@ -72,7 +72,12 @@ export const Avatar = React.forwardRef<HTMLSpanElement, Avatarprops>(
         ) : icon ? (
           icon
         ) : (
-          <Text color="$white" size={size === "default" ? "$lg" : "$xs"}>
+          <Text
+            color="$white"
+            size={
+              size === "default" ? "$lg" : size === "large" ? "$3xl" : "$xs"
+            }
+          >
             {getInitials()}
           </Text>
         )}

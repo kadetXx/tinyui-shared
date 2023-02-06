@@ -74,7 +74,7 @@ export const globalStyles = globalCss({
 
   html: {
     outline: "none",
-    overflow: "hidden",
+    overflowX: "hidden",
     boxSizing: "border-box",
     scrollBehavior: "smooth",
     textDecoration: "none",
@@ -84,7 +84,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    overflow: "hidden",
+    overflowX: "hidden",
     fontFamily: theme.fonts.default,
   },
 

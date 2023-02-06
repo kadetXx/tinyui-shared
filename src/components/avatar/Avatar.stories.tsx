@@ -21,6 +21,12 @@ Small.args = {
   title: "Collins Enebeli",
 };
 
+export const Large = Template.bind({});
+Large.args = {
+  size: "large",
+  title: "Collins Enebeli",
+};
+
 export const WithImage = Template.bind({});
 WithImage.args = {
   title: "Collins Enebeli",
