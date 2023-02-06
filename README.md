@@ -1,4 +1,4 @@
-# @adp Shared-UI
+# @adp shared-ui
 
 Shared UI Components
 
