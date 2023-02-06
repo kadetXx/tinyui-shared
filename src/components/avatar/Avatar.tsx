@@ -85,5 +85,3 @@ export const Avatar = React.forwardRef<HTMLSpanElement, Avatarprops>(
     );
   }
 );
-
-Avatar.displayName = "Avatar";

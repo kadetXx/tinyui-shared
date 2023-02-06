@@ -58,5 +58,3 @@ export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
     );
   }
 );
-
-export default Flex;

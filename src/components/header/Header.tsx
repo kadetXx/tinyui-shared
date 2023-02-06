@@ -70,5 +70,3 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
     );
   }
 );
-
-export default Header;
