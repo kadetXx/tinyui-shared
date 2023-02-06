@@ -29,7 +29,7 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
     return (
       <StyledHeader ref={ref} {...props}>
         <Flex justify="space-between" align="center">
-          <Text variant="h1" size="$lg">
+          <Text variant="h1" size="$xl">
             AdpTest
           </Text>
 

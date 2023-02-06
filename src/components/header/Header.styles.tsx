@@ -18,6 +18,8 @@ export const StyledExternalLink = styled("a", {
 });
 
 export const StyledLogout = styled(Button, {
+  fontWeight: 'bold',
+  
   "&:hover": {
     color: "$danger",
   },
