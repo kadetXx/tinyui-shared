@@ -15,7 +15,7 @@ export const StyledInputWrapper = styled(Flex, {
   },
 
   variants: {
-    error: {
+    hasError: {
       true: {
         borderColor: "$danger",
 
@@ -25,9 +25,10 @@ export const StyledInputWrapper = styled(Flex, {
       },
     },
 
-    disabled: {
+    isDisabled: {
       true: {
         opacity: 0.6,
+        pointerEvents: "none",
       },
     },
   },

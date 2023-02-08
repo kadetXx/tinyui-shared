@@ -15,7 +15,7 @@ export type InputProps = React.ComponentProps<typeof StyledInput> &
     wrapperStyle?: CSS;
     inputStyle?: CSS;
     label?: string | React.ReactNode;
-    errorMessage?: string;
+    error?: string | boolean;
     required?: boolean;
   };
 
@@ -29,8 +29,8 @@ export const Input: React.FC<InputProps> = ({
   type,
   required,
   disabled,
+  isDisabled,
   wrapperStyle,
-  errorMessage,
   className,
   ...inputProps
 }) => {
@@ -45,8 +45,8 @@ export const Input: React.FC<InputProps> = ({
       <StyledInputWrapper
         align="center"
         gapX="1.7rem"
-        disabled={disabled}
-        error={!!errorMessage}
+        isDisabled={disabled || isDisabled}
+        hasError={!!error}
       >
         {prepend}
 
@@ -62,7 +62,7 @@ export const Input: React.FC<InputProps> = ({
         {append}
       </StyledInputWrapper>
 
-      {errorMessage && <InputError>{errorMessage}</InputError>}
+      {typeof error === "string" && <InputError>{error}</InputError>}
     </Flex>
   );
 };

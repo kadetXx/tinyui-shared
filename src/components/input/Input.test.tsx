@@ -27,15 +27,15 @@ describe("Input component", () => {
   });
 
   it("displays error message if provided", () => {
-    const errorMessage = "This is a required field";
+    const error = "This is a required field";
 
     const { getByText } = setup({
       id: "input",
       type: "text",
-      errorMessage,
+      error,
     });
 
-    expect(getByText(errorMessage)).toBeInTheDocument();
+    expect(getByText(error)).toBeInTheDocument();
   });
 
   it("updates value on user input", () => {

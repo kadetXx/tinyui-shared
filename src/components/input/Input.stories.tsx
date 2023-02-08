@@ -24,8 +24,7 @@ WithLabel.args = {
 export const WithError = Template.bind({});
 WithError.args = {
   label: "Email address",
-  error: true,
-  errorMessage: "Enter a valid email",
+  error: "Enter a valid email",
   placeholder: "example@adplist.com",
 };
 
