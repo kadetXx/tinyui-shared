@@ -30,7 +30,7 @@ Large.args = {
 export const WithImage = Template.bind({});
 WithImage.args = {
   title: "Collins Enebeli",
-  src: "https://avatars.dicebear.com/api/adventurer-neutral/m.svg",
+  src: "https://picsum.photos/200",
 };
 
 export const WithIcon = Template.bind({});
