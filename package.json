@@ -1,15 +1,18 @@
 {
   "name": "@adp/common",
   "version": "1.0.0",
-  "description": "Shared components for adp-list test project",
+  "description": "Tiny shared ui library demo",
   "main": "dist/index.js",
   "scripts": {
     "rollup": "rollup -c",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic"
   },
-  "author": "kadetXx",
+  "author": {
+    "name": "kadetXx"
+  },
   "license": "ISC",
   "files": [
     "dist"
@@ -50,5 +53,7 @@
     "typescript": "^4.9.5",
     "yarn": "^1.22.19"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "readme": "ERROR: No README data found!",
+  "_id": "@adp/common@1.0.0"
 }

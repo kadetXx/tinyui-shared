@@ -32,7 +32,7 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
       <StyledHeader ref={ref} {...props}>
         <Flex as="header" justify="space-between" align="center">
           <Text variant="h1" size="$xl">
-            AdpTest
+            TinyUI
           </Text>
 
           {!!profile && (
@@ -45,7 +45,7 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
                 <Link to={handleUrl().href}>
                   <Avatar
                     size="small"
-                    title={profile.username || "ADP User"}
+                    title={profile.username || "Anon User"}
                     src={profile.avatarUrl}
                   />
                 </Link>
@@ -57,7 +57,7 @@ export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
                 >
                   <Avatar
                     size="small"
-                    title={profile.username || "ADP User"}
+                    title={profile.username || "Anon User"}
                     src={profile.avatarUrl}
                   />
                 </StyledExternalLink>

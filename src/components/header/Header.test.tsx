@@ -25,7 +25,7 @@ describe("Header Component", () => {
   it("renders with logo text", () => {
     const { getByText } = setup({});
 
-    const logo = getByText("AdpTest");
+    const logo = getByText("TinyUI");
     expect(logo).toBeInTheDocument();
   });
 

@@ -18,21 +18,21 @@ Default.args = {
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   label: "Email address",
-  placeholder: "example@adplist.com",
+  placeholder: "example@tinyui.com",
 };
 
 export const WithError = Template.bind({});
 WithError.args = {
   label: "Email address",
   error: "Enter a valid email",
-  placeholder: "example@adplist.com",
+  placeholder: "example@tinyui.com",
 };
 
 export const Required = Template.bind({});
 Required.args = {
   required: true,
   label: "Email address",
-  placeholder: "example@adplist.com",
+  placeholder: "example@tinyui.com",
 };
 
 export const Disabled = Template.bind({});
