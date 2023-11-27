@@ -1,6 +1,6 @@
-# Tiny Ui Library
+# Tiny UI
 
-Shared UI Components
+Mini shared ui components library.
 
 ## Getting Started
 

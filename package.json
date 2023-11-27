@@ -1,7 +1,7 @@
 {
-  "name": "@adp/common",
+  "name": "tinyui",
   "version": "1.0.0",
-  "description": "Tiny shared ui library demo",
+  "description": "Mini shared ui components library",
   "main": "dist/index.js",
   "scripts": {
     "rollup": "rollup -c",
